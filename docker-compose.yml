@@ -1,0 +1,28 @@
+services:
+  postgres:
+    image: postgres:16
+    container_name: fa_postgres
+    environment:
+      POSTGRES_USER: fa
+      POSTGRES_PASSWORD: fa
+      POSTGRES_DB: fa
+    ports:
+      - "5433:5432"          # 5433 on your PC, because Windows Postgres 17 already uses 5432
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+
+  superset:
+    build: ./superset
+    container_name: fa_superset
+    depends_on:
+      - postgres
+    environment:
+      SUPERSET_SECRET_KEY: "change-me-to-any-long-random-string-1234567890"
+    ports:
+      - "8088:8088"
+    volumes:
+      - superset_home:/app/superset_home   # keeps your charts/dashboards across restarts
+
+volumes:
+  pgdata:
+  superset_home:
