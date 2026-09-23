@@ -26,3 +26,11 @@ Corrected fleet AFR is 1.24%
 The worst WD/HGST model was WUH721816ALE7L4 with an afr of 6.05%
 
 23.4% of drives failed with no SMART warnings so they can't be predicted from SMART alone
+
+#Day 3
+
+
+
+System Prompt:
+NULL means "not reported", never 0
+Always state how many days of history were available
