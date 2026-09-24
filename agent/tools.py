@@ -27,8 +27,8 @@ def run_sql(query): #Function to run any query
 
 
 if __name__ == "__main__":
-    print(get_fleet_baseline("TOSHIBA MG07ACA14TEY"))   # a dict, not a list
-    print(get_fleet_baseline("FAKE-MODEL"))             # error dict
+    # print(get_fleet_baseline("TOSHIBA MG07ACA14TEY"))   # a dict, not a list
+    # print(get_fleet_baseline("FAKE-MODEL"))             # error dict
     print(get_drive_history("1050A006F9RG"))            # summary + 6 trend days
-    print(get_drive_history("NOT-REAL"))                # error dict
-    print(run_sql("SELECT * FROM not_a_table"))         # error dict (the AI made a mistake)
+    # print(get_drive_history("NOT-REAL"))                # error dict
+    # print(run_sql("SELECT * FROM not_a_table"))         # error dict (the AI made a mistake)
