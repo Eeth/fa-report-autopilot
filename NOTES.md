@@ -34,3 +34,7 @@ The worst WD/HGST model was WUH721816ALE7L4 with an afr of 6.05%
 System Prompt:
 NULL means "not reported", never 0
 Always state how many days of history were available
+
+
+#Day 4
+Bug 1 - Writes an md for everything even when not needed
